@@ -27,7 +27,7 @@ header {
 }
 
 .burger-menu .line {
-    width: 100%;
+    width: 30px;
     height: 3px;
     background-color: rgba(124, 66, 38, 1);
     border-radius: 2px;
