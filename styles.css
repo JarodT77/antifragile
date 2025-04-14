@@ -541,8 +541,12 @@ header {
   
 
     .btn-submit {
-        margin-top: 10px; ;
-        width: 103%;
+        justify-content: center;
+        margin: 0 auto; /* Centre le bouton horizontalement */
+        margin-top: 10px;        
+        width: 50%;
+        color: rgba(235, 211, 162, 1);
+        
         
     }
 
@@ -578,9 +582,9 @@ header {
     }
 
     .contact-grid {
-        margin-inline: 2rem;
+        margin-inline: 1rem;
         text-align:center;
-        padding: 2rem;
+        padding: 2rem;       
     }
 
     .form-input {
