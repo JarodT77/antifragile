@@ -27,3 +27,10 @@ const updateArrows = () => {
 // Mettre à jour les flèches au chargement et lors du défilement
 reelContainer.addEventListener('scroll', updateArrows);
 window.addEventListener('load', updateArrows);
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+burgerMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active'); // Ajoute ou enlève la classe "active"
+});

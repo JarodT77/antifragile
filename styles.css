@@ -1,13 +1,36 @@
 body, html {
     margin: 0; /* Supprime les marges par défaut */
     padding: 0; /* Supprime les paddings par défaut */
-    box-sizing: border-box; /* Assure un meilleur contrôle des dimensions */
+    box-sizing: border-box;
+     /* Assure un meilleur contrôle des dimensions */
+}
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
 }
 
 header {
     background-color: rgba(235, 211, 162, 1);
     margin: 0; /* Supprime les marges externes */
     padding-top: 1px;
+}
+
+.burger-menu {
+    display: none; /* Caché par défaut sur les grands écrans */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-menu .line {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(124, 66, 38, 1);
+    border-radius: 2px;
 }
 
 .nav-menu {
@@ -26,12 +49,12 @@ header {
 
 .nav-menu a {
     text-decoration: none;
-    color: #000;
+    color: rgba(124, 66, 38, 1);
     font-weight: bold;
 }
 
 .nav-menu a:hover {
-    color: #007BFF; /* Couleur au survol */
+    color: rgba(85, 88, 50, 1); /* Couleur au survol */
 }
 
 .title-site {
@@ -61,7 +84,7 @@ header {
     font-family: 'Poppins';
     font-weight: normal;
     margin: 0;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid rgba(85, 88, 50, 1);
     color:rgba(124, 66, 38, 1) ;
 }
 .size-book {
@@ -96,7 +119,7 @@ header {
     margin: 20px auto; /* Centre le bouton horizontalement */
     padding: 10px 20px;
     background-color: rgba(124, 66, 38, 1) ; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
+    color: rgba(235, 211, 162, 1); /* Couleur du texte */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -137,7 +160,7 @@ header {
 }
 
 .container {
-    border: solid 4px rgba(124, 66, 38, 1);
+    border: solid 3px rgba(124, 66, 38, 1);
     border-radius: 15px;
     padding: 2rem;
 }
@@ -399,9 +422,22 @@ header {
         width: 100%; /* Assure que l'en-tête prend toute la largeur */
     }
 
+    .burger-menu {
+        display: flex;
+        margin-top: 1rem;
+        margin-left: 1rem; /* Affiche le menu burger sur les petits écrans */
+    }
+
     /* Navigation */
     .nav-menu {
-        display: none; /* Cache le menu horizontal par défaut */
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgba(235, 211, 162, 1);
+        
+    }
+    .nav-menu.active {
+        display: flex; /* Affiche le menu lorsqu'il est actif */
     }
 
     /* Titre principal */
@@ -502,13 +538,12 @@ header {
         gap: 20px;
     }
 
-    .form-input, .form-textarea {
-        width: 90%; /* Réduit la largeur des champs */
-    }
+  
 
     .btn-submit {
         margin-top: 10px; ;
-        width: 100%; /* Bouton prend toute la largeur */
+        width: 103%;
+        
     }
 
     /* Section des Reels */
@@ -560,4 +595,5 @@ header {
     .font-poppins-form {
         font-size: 16px; /* Réduit la taille du texte */
     }
+
 }

@@ -12,18 +12,24 @@
 <body>
     <header>
         <nav>
+            <button class="burger-menu" aria-label="Menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+    
             <ul class="nav-menu">
-                <li class="font-poppins">Accueil</li>
-                <li class="font-poppins">Le livre</li>
-                <li class="font-poppins">A propos</li>
-                <li class="font-poppins">Contact</li>
+                <li class="font-poppins"><a href="#accueil">Accueil</a></li>
+                <li class="font-poppins"><a href="#livre">Le livre</a></li>
+                <li class="font-poppins"><a href="#a-propos">A propos</a></li>
+                <li class="font-poppins"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="title-site">
             <h1 class="font-spartan-title">NUTRITION ANTIFRAGILE</h1>
             <h2 class="font-poppins-title">Eveille les consciences sur la nutritition du XXI eme siecle</h2>
         </div>
-        <section class="book-section">
+        <section class="book-section" id="accueil">
             <div class="book-text">
                 <h1 class="font-spartan">Decouvrez le livre qui changera ton regard sur la nutrition</h1>
                 <p class="font-poppins">Petite phrase d'accroche pour tease le livre</p>
@@ -45,7 +51,7 @@
             
         </section>
     </header>
-        <section class="benefits-section"> 
+        <section class="benefits-section" id="livre"> 
         <div class="title-site">
             <h1 class="font-spartan-alt">A PROPOS DU LIVRE</h1>
         </div>
@@ -76,7 +82,7 @@
             <h2 class="extrait-text">"Dis-moi ce que tu manges, je te dirai ce que tu es."</h2>
         </div>
     </section>
-    <section class="profil-section">
+    <section class="profil-section" id="a-propos">
         <div class="title-site">
             <h1 class="font-spartan">QUI SUIS JE ?</h1>
             <div class="profil-grid">
@@ -135,7 +141,7 @@
             <button class="reel-arrow right-arrow">→</button>
         </div>
     </section>
-    <section class="form-section">
+    <section class="form-section" id="contact">
         <div class="title-site">
             <h1 class="font-spartan">ME CONTACTER</h1>
         </div>
